@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page  
+GET      /                                      controllers.NoticeController.getNotice()
+GET      /user/test                             controllers.UserController.test(username:String,password:String)
+GET     /user/doLogin                           controllers.UserController.doLogin(username:String,password:String)
+GET     /notice/getNotice                       controllers.NoticeController.getNotice()
+GET     /notice/getNoticeTop15Tzggxs            controllers.NoticeController.getNoticeTop15Tzggxs()
+GET     /notice/getNoticeTop15Tzggxy            controllers.NoticeController.getNoticeTop15Tzggxy()
+GET     /user/getGrade                          controllers.UserController.getGrade(username:String,password:String,xnm:String,xqm:String)
+# Map static resources from the /public folder to the /assets URL path
+GET      /assets/*file                               controllers.Assets.at(path="/public", file)
+POST      /course/addCourse                          controllers.CourseController.addCourse()
+POST     /course/addCourseComment                    controllers.CourseCommentController.addCourseComment()
+GET     /course/getCourseComment                     controllers.CourseCommentController.getCourseComment(courseId:String)
+GET    /course/getCourseIds                          controllers.CourseController.getCourseIds(search:String)
